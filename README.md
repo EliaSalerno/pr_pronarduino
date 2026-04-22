@@ -1,8 +1,7 @@
 # TRA PYTHON E ARDUINO
 
 <details>
-  <summary>
-## Prima soluzione -> Numpy</summary>
+  <summary>Prima soluzione -> Numpy</summary>
 
 ---
 
@@ -55,4 +54,56 @@ La soluzione Nanpy è particolarmente indicata per,,:
 ---
 
 *Nota: Questa documentazione è tratta dai tutorial di Ludovico Russo sull'integrazione hardware tra Python e Arduino.*
+</details>
+<details>
+<summary>Micropython e arduino</summary>
+MicroPython su Arduino: Guida alla Soluzione Ufficiale
+Arduino ha introdotto il linguaggio Python come opzione aggiuntiva per la programmazione dei propri microcontrollori, scegliendo MicroPython come piattaforma di riferimento
+. A differenza della soluzione Nanpy (dove Arduino funge da slave), MicroPython permette al codice di girare direttamente sulla scheda.
+1. Cos'è MicroPython per Arduino?
+MicroPython è un'implementazione efficiente del linguaggio Python 3, ottimizzata per girare su microcontrollori
+. Arduino contribuisce attivamente al progetto ufficiale supportando il repository upstream e integrando il supporto per le proprie schede
+.
+2. Hardware Supportato
+Non tutte le schede Arduino supportano MicroPython. La documentazione elenca specificamente i seguenti modelli compatibili
+:
+Serie Nano: Nano ESP32, Nano 33 BLE Sense, Nano RP2040 Connect.
+Serie Portenta: Portenta H7, Portenta C33.
+Altre schede professionali: Arduino GIGA R1 WiFi, Arduino Nicla Vision, Arduino Opta.
+Il corso introduttivo "MicroPython 101" utilizza specificamente la scheda Arduino Nano ESP32 come hardware di riferimento
+.
+3. Ambienti di Sviluppo (Editor)
+Per caricare script MicroPython sulle schede, Arduino propone due editor principali
+:
+Arduino Lab for MicroPython: Un editor sperimentale e leggero, ideale per la scrittura di codice MicroPython standard
+.
+OpenMV IDE: Un editor specializzato per il firmware OpenMV, orientato alla machine vision (visione artificiale) e al machine learning
+.
+4. Installazione e Configurazione
+Installazione del Firmware
+Prima di poter eseguire script Python, è necessario caricare il firmware corretto sulla scheda
+. Esistono due modalità principali
+:
+Arduino MicroPython Installer: Uno strumento raccomandato per un'installazione rapida e semplice.
+Installazione Manuale: È possibile scaricare manualmente versioni specifiche del firmware (in formato .dfu o .hex) a seconda della stabilità richiesta (versioni stable o preview)
+.
+Caricamento del Codice
+Una volta installato il firmware, si utilizza un editor compatibile per connettersi alla scheda e trasferire i file .py
+.
+5. Risorse Didattiche e Progetti
+Arduino offre diverse risorse per iniziare
+:
+MicroPython 101: Un corso strutturato che guida l'utente attraverso capitoli di apprendimento ed esercizi pratici
+.
+Esempi per Scheda: Raccolte di codice per sfruttare le caratteristiche specifiche di ogni modello (es. GIGA R1 WiFi)
+.
+Progetti Plug-and-Play: Progetti completi di codice e schemi circuitali pronti all'uso
+.
+6. OpenMV e Visione Artificiale
+Per applicazioni avanzate, Arduino supporta il firmware OpenMV, basato anch'esso su MicroPython
+. Questo ecosistema include un editor dedicato e permette di implementare soluzioni di visione artificiale e apprendimento automatico direttamente sull'hardware Arduino
+.
+
+--------------------------------------------------------------------------------
+Nota: Queste informazioni sono tratte dalla documentazione ufficiale Arduino aggiornata al 2026
 </details>
