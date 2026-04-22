@@ -1,9 +1,44 @@
 # TRA PYTHON E ARDUINO
+## Nampy vs Micropython
+
+Un confronto dettagliato basato sulle fonti:
+1. Architettura e Modalità di Esecuzione
+Nanpy: Funziona secondo una logica Master-Slave. Arduino non è un dispositivo indipendente, ma agisce come uno "slave" che esegue continuamente i comandi impartiti dal computer (il "master") tramite un protocollo seriale
+. Il codice Python risiede e gira interamente sul computer
+.
+MicroPython: Permette di caricare ed eseguire gli script Python direttamente sulla scheda
+. In questo caso, il microcontrollore non ha bisogno di un computer esterno per funzionare una volta che il codice è stato caricato
+.
+2. Autonomia e Connessione
+Nanpy: Richiede una connessione seriale costante tra Arduino e il PC
+. Se il cavo viene scollegato, Arduino smette di ricevere istruzioni e non può operare in autonomia
+.
+MicroPython: La scheda è autonoma. Si utilizza il computer solo per scrivere e trasferire i file .py tramite appositi editor (come Arduino Lab per MicroPython o OpenMV IDE), dopodiché la scheda può funzionare indipendentemente
+.
+3. Performance e Limiti
+Nanpy: Il principale svantaggio è il collo di bottiglia rappresentato dalla velocità della comunicazione seriale, che può limitare le applicazioni che richiedono un'esecuzione molto rapida
+. È però eccellente per l'acquisizione dati dove l'analisi complessa è lasciata al PC
+.
+MicroPython: Essendo un'implementazione ottimizzata per girare direttamente sull'hardware, non soffre dei limiti della latenza seriale per l'esecuzione del codice
+.
+4. Hardware Supportato
+Nanpy: È ampiamente utilizzato con schede classiche come Arduino Uno
+.
+MicroPython: È supportato ufficialmente solo da una selezione di schede più recenti e potenti, tra cui:
+Serie Nano: Nano ESP32 (usata per il corso MicroPython 101), Nano 33 BLE Sense, Nano RP2040 Connect
+.
+Serie Portenta: Portenta H7, Portenta C33
+.
+Altre: Arduino GIGA R1 WiFi, Nicla Vision e Arduino Opta
+.
+5. Strumenti di Sviluppo
+Nanpy: Si installa tramite pip e può essere utilizzato con qualsiasi IDE Python standard, come Spyder
+. Richiede il caricamento del firmware Nanpy.ino tramite l'IDE di Arduino
+.
+MicroPython: Richiede l'installazione di un firmware specifico (spesso in formato .dfu o .hex) e l'uso di editor dedicati come Arduino Lab for MicroPython o OpenMV IDE per la visione artificiale
 
 <details>
   <summary>Prima soluzione -> Numpy</summary>
-
----
 
 # Python + Arduino: Controllo Hardware con Nanpy
 
@@ -57,7 +92,8 @@ La soluzione Nanpy è particolarmente indicata per,,:
 </details>
 <details>
 <summary>Micropython e arduino</summary>
-MicroPython su Arduino: Guida alla Soluzione Ufficiale
+
+## MicroPython su Arduino: Guida alla Soluzione Ufficiale
 Arduino ha introdotto il linguaggio Python come opzione aggiuntiva per la programmazione dei propri microcontrollori, scegliendo MicroPython come piattaforma di riferimento
 . A differenza della soluzione Nanpy (dove Arduino funge da slave), MicroPython permette al codice di girare direttamente sulla scheda.
 1. Cos'è MicroPython per Arduino?
@@ -67,17 +103,17 @@ MicroPython è un'implementazione efficiente del linguaggio Python 3, ottimizzat
 2. Hardware Supportato
 Non tutte le schede Arduino supportano MicroPython. La documentazione elenca specificamente i seguenti modelli compatibili
 :
-Serie Nano: Nano ESP32, Nano 33 BLE Sense, Nano RP2040 Connect.
-Serie Portenta: Portenta H7, Portenta C33.
-Altre schede professionali: Arduino GIGA R1 WiFi, Arduino Nicla Vision, Arduino Opta.
+Serie Nano: **Nano ESP32, Nano 33 BLE Sense, Nano RP2040 Connect**.
+Serie Portenta: **Portenta H7, Portenta C33**.
+Altre schede professionali: **Arduino GIGA R1 WiFi, Arduino Nicla Vision, Arduino Opta**.
 Il corso introduttivo "MicroPython 101" utilizza specificamente la scheda Arduino Nano ESP32 come hardware di riferimento
 .
-3. Ambienti di Sviluppo (Editor)
+3. **Ambienti di Sviluppo** (Editor)
 Per caricare script MicroPython sulle schede, Arduino propone due editor principali
 :
-Arduino Lab for MicroPython: Un editor sperimentale e leggero, ideale per la scrittura di codice MicroPython standard
+**Arduino Lab for MicroPython**: Un editor sperimentale e leggero, ideale per la scrittura di codice MicroPython standard
 .
-OpenMV IDE: Un editor specializzato per il firmware OpenMV, orientato alla machine vision (visione artificiale) e al machine learning
+**OpenMV IDE**: Un editor specializzato per il firmware OpenMV, orientato alla machine vision (visione artificiale) e al machine learning
 .
 4. Installazione e Configurazione
 Installazione del Firmware
@@ -87,19 +123,20 @@ Prima di poter eseguire script Python, è necessario caricare il firmware corret
 Arduino MicroPython Installer: Uno strumento raccomandato per un'installazione rapida e semplice.
 Installazione Manuale: È possibile scaricare manualmente versioni specifiche del firmware (in formato .dfu o .hex) a seconda della stabilità richiesta (versioni stable o preview)
 .
-Caricamento del Codice
+**Caricamento del Codice**
 Una volta installato il firmware, si utilizza un editor compatibile per connettersi alla scheda e trasferire i file .py
 .
-5. Risorse Didattiche e Progetti
+5. **Risorse Didattiche e Progetti**
+
 Arduino offre diverse risorse per iniziare
 :
-MicroPython 101: Un corso strutturato che guida l'utente attraverso capitoli di apprendimento ed esercizi pratici
+**MicroPython 101**: Un corso strutturato che guida l'utente attraverso capitoli di apprendimento ed esercizi pratici
 .
 Esempi per Scheda: Raccolte di codice per sfruttare le caratteristiche specifiche di ogni modello (es. GIGA R1 WiFi)
 .
-Progetti Plug-and-Play: Progetti completi di codice e schemi circuitali pronti all'uso
+Progetti **Plug-and-Play**: Progetti completi di codice e schemi circuitali pronti all'uso
 .
-6. OpenMV e Visione Artificiale
+6. **OpenMV e Visione Artificiale**
 Per applicazioni avanzate, Arduino supporta il firmware OpenMV, basato anch'esso su MicroPython
 . Questo ecosistema include un editor dedicato e permette di implementare soluzioni di visione artificiale e apprendimento automatico direttamente sull'hardware Arduino
 .
