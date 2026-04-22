@@ -94,8 +94,8 @@ La soluzione Nanpy è particolarmente indicata per,,:
 <summary>Micropython e arduino</summary>
 
 ## MicroPython su Arduino: Guida alla Soluzione Ufficiale
-Arduino ha introdotto il linguaggio Python come opzione aggiuntiva per la programmazione dei propri microcontrollori, scegliendo MicroPython come piattaforma di riferimento
-. A differenza della soluzione Nanpy (dove Arduino funge da slave), MicroPython permette al codice di girare direttamente sulla scheda.
+Arduino ha introdotto il linguaggio Python come opzione aggiuntiva per la programmazione dei propri microcontrollori, scegliendo **MicroPython** come piattaforma di riferimento
+. A differenza della soluzione **Nanpy** (dove Arduino funge da slave), MicroPython permette al codice di girare direttamente sulla scheda.
 1. Cos'è MicroPython per Arduino?
 MicroPython è un'implementazione efficiente del linguaggio Python 3, ottimizzata per girare su microcontrollori
 . Arduino contribuisce attivamente al progetto ufficiale supportando il repository upstream e integrando il supporto per le proprie schede
