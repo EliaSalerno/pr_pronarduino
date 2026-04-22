@@ -1,4 +1,8 @@
-Ecco un documento dettagliato in formato Markdown basato sulle informazioni fornite nelle fonti riguardo alla soluzione **Nanpy** per l'integrazione tra Python e Arduino.
+# TRA PYTHON E ARDUINO
+
+<details>
+  <summary>
+## Prima soluzione -> Numpy</summary>
 
 ---
 
@@ -51,3 +55,4 @@ La soluzione Nanpy è particolarmente indicata per,,:
 ---
 
 *Nota: Questa documentazione è tratta dai tutorial di Ludovico Russo sull'integrazione hardware tra Python e Arduino.*
+</details>
